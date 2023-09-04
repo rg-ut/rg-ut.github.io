@@ -57,4 +57,37 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>python爬虫</title>
+    <url>/2023/09/04/python%E7%88%AC%E8%99%AB/</url>
+    <content><![CDATA[<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><h2 id="http基本原理"><a href="#http基本原理" class="headerlink" title="http基本原理"></a>http基本原理</h2><ul>
+<li><p>URL(统一资源定位符):通俗来说就是网址  </p>
+</li>
+<li><p>超文本html  </p>
+</li>
+<li><p>http和https  </p>
+<ul>
+<li>https简单来说就是http的安全版，即http加入了SSL层<blockquote>
+<p>主要作用:  </p>
+<ul>
+<li>建立一个信息安全通道来保证数据安全  </li>
+<li>确认网站真实性,除此之外还可以通过CA证书查询</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p>一个小案例:<br>12306虽然使用了https任然会被提示不安全,是因为12306的CA证书是自行签发的,不受CA机构信任,但是它的数据传输确实使用了SSL加密,如果要爬取类似站点,需要设置忽略证书选项,否则会提示SSL链接错误</p>
+<p>http的请求过程  </p>
+<h3 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h3><p>请求方式:GET 和 POST<br>GET是最平常的方式<br>涉及到敏感信息,文件过大使用POST</p>
+<p>请求头,其中重点关注Cookie,Referer,User-Agent,Content-type,host等</p>
+<p>请求体:表单数据,即POST提交的数据</p>
+<h3 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h3><p>响应分为三部分:响应状态码如(404\200),响应头,响应体</p>
+</li>
+</ul>
+<h2 id="网页基础-略"><a href="#网页基础-略" class="headerlink" title="网页基础(略)"></a>网页基础(略)</h2><h2 id="爬虫的基本原理"><a href="#爬虫的基本原理" class="headerlink" title="爬虫的基本原理"></a>爬虫的基本原理</h2><p>1.简单来说,爬虫就是获取网页并<strong>提取</strong>和保存信息的<strong>自动化</strong>程序</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>2.一般来说,网页上更多是通过JavaScript渲染过的,所以通过像只能抓取html的requests库不满足爬虫需求<br>3.图片视频被保存为二进制文件.</p>
+<h3 id="会话和Cookie-自动登录的魔法书"><a href="#会话和Cookie-自动登录的魔法书" class="headerlink" title="会话和Cookie(自动登录的魔法书)"></a>会话和Cookie(自动登录的魔法书)</h3><p>会话: 服务端,也是网站服务器,用来保存用户的会话信息<br>Cookie: 客户端,,也是浏览器端,用来判断用户身份和登录状态<br>Cookie的属性结构:</p>
+<h3 id="代理的基本原理"><a href="#代理的基本原理" class="headerlink" title="代理的基本原理"></a>代理的基本原理</h3><p>处理爬虫过程中访问频繁导致的封IP<br>代理的作用:<br>常见代理方式:<br>免费代理,付费代理<br>ADSL……</p>
+]]></content>
+  </entry>
 </search>
